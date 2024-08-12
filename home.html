@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't Use Cure 1!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Function to open a tab
+        function openTab(tabName) {
+            var i;
+            var x = document.getElementsByClassName("tabcontent");
+            var tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+    
+        // Open the first tab by default
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector('.tab button').click();
+        });
+    </script>
+</head>
+<body>
+
+<header>
+    <h1 class="highlight">
+        <img src="48px-Cure_Icon.png" alt="Cure 1 Icon"> 
+        STOP USING <span class="cure1">Cure 1</span>, USE <span class="cure2-header">Cure 2</span> 
+        <img src="48px-Cure_II_Icon.png" alt="Cure 2 Icon">
+    </h1>
+</header>
+
+<main>
+    <section id="tldr" class="tldr-box">
+        <h2>Too Long; Didn't Read (TL;DR)</h2>
+        <p>Once you unlock <span class="cure2">Cure 2</span> at level 30, you should always use it instead of <span class="cure1">Cure 1</span>. </p>
+        <p><span class="cure2">Cure 2</span> heals for 700 potency and only costs slightly more mana, making it the better choice in almost every situation.</p>
+        <p><b>Use Cure 2. Don’t rely on <span class="cure1">Cure 1</span> just to save MP or try for Free Cure procs</b></p>
+    </section>
+    
+
+    <section id="welcome">
+        <h2>If Someone Sent You This, Don’t Take It Rudely</h2>
+        <p>
+            The intent behind sending you this page isn’t to criticize or belittle your gameplay. 
+            <strong>Final Fantasy XIV</strong> is a team-based game where success relies heavily on cooperation and understanding among all party members. When everyone plays optimally, the entire group benefits, leading to smoother runs, faster clears, and a more enjoyable experience for everyone.
+        </p>
+        <p>
+            It’s not toxic or negative to want to help others improve; in fact, it’s a sign of respect and camaraderie. 
+            Taking a moment to learn and adjust can make a huge difference not just for you, but for your entire party. 
+            Remember, we’re all here for smooth and quick encounters!
+        </p>
+    </section>
+    
+
+    <section id="tabbed-content">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab('detailed')">Detailed Explanations</button>
+            <button class="tablinks" onclick="openTab('freecure')">Why Freecure is a Trap</button>
+            <button class="tablinks" onclick="openTab('mp-management')">MP Management</button>
+        </div>
+
+        <div id="detailed" class="tabcontent" style="display:none;">
+            <h2>In-Depth Explanation with Potency Over Time</h2>
+            <p>Let’s break down the potency over time and the speed of healing to see why <span class="cure2">Cure 2</span> is more effective:</p>
+
+            <h3>Example Scenario: Potency Over Time</h3>
+            <ul>
+                <li><span class="cure1">Cure 1</span>: Heals for 400 potency per cast. With a global cooldown (GCD) of 2.5 seconds, you can cast <span class="cure1">Cure 1</span> approximately 24 times in 60 seconds, resulting in 9600 potency over that time.</li>
+                <li><span class="cure2">Cure 2</span>: Heals for 700 potency per cast. With the same GCD of 2.5 seconds, you can cast <span class="cure2">Cure 2</span> approximately 24 times in 60 seconds, resulting in 16800 potency over that time.</li>
+            </ul>
+            <p>This means that by using <span class="cure2">Cure 2</span>, you’re getting an additional <strong>7200 potency</strong> over the same 60 seconds compared to <span class="cure1">Cure 1</span>. This is a substantial increase in healing output, which can be crucial in high-stakes combat situations.</p>
+
+            <h3>Example Scenario: Speed of Healing a Tank Under Heavy Damage</h3>
+            <ul>
+                <li><span class="cure1">Cure 1</span>: Heals for 400 potency every 2.5 seconds. If a tank is taking rapid damage, you might need to cast <span class="cure1">Cure 1</span> multiple times to stabilize their HP. After 10 seconds (4 casts), you will have healed for 1600 potency.</li>
+                <li><span class="cure2">Cure 2</span>: Heals for 700 potency every 2.5 seconds. In the same 10 seconds (4 casts), <span class="cure2">Cure 2</span> will have healed for 2800 potency.</li>
+            </ul>
+            <p>In this scenario, <span class="cure2">Cure 2</span> provides <strong>1200 additional potency</strong> over just 10 seconds compared to <span class="cure1">Cure 1</span>. This faster and more effective healing can be the difference between a tank surviving or falling during heavy damage phases.</p>
+        </div>
+
+        <div id="freecure" class="tabcontent" style="display:none;">
+            <h2>Why Relying on Freecure is a Trap</h2>
+            <p><span class="cure1">Cure 1</span> has a 15% chance to trigger the <strong>Freecure</strong> effect, making your next <span class="cure2">Cure 2</span> free. While this might seem like a great way to conserve MP, it’s actually a trap for several reasons:</p>
+
+            <h4>Example Scenario: The Freecure Trap</h4>
+            <ul>
+                <li><strong>Inconsistent Procs:</strong> The chance of triggering Freecure is only 15%. Statistically, this means you can expect a Freecure proc roughly once every 6-7 casts of <span class="cure1">Cure 1</span>. Over 7 casts of <span class="cure1">Cure 1</span> (at 2.5 seconds per cast), you'll spend 17.5 seconds healing for 2800 potency, and you might get 1 free <span class="cure2">Cure 2</span> cast.</li>
+                <li><strong>Potency Comparison:</strong> During those 17.5 seconds, if you had cast <span class="cure2">Cure 2</span> instead:
+                    <ul>
+                        <li>You would cast <span class="cure2">Cure 2</span> 7 times.</li>
+                        <li>Each <span class="cure2">Cure 2</span> cast heals for 700 potency, totaling 4900 potency over 17.5 seconds.</li>
+                        <li>Comparatively, <span class="cure1">Cure 1</span> with a Freecure proc would yield 2800 (Cure 1) + 700 (Freecure Cure 2) = 3500 potency.</li>
+                    </ul>
+                    <p>This results in a loss of <strong>1400 potency</strong> by relying on <span class="cure1">Cure 1</span> and Freecure instead of using <span class="cure2">Cure 2</span> directly.</p>
+                </li>
+                <li><strong>Wasted Time and MP:</strong> Every time you cast <span class="cure1">Cure 1</span> hoping for a Freecure proc, you’re spending more GCDs and potentially more MP on weaker heals, rather than directly providing stronger healing with <span class="cure2">Cure 2</span>.</li>
+            </ul>
+            <p>In most situations, the guaranteed healing output of <span class="cure2">Cure 2</span> far outweighs the potential MP savings from Freecure. By focusing on <span class="cure2">Cure 2</span> and using <img src="48px-Lucid_Dreaming_Icon.png" alt="Lucid Dreaming Icon"> Lucid Dreaming effectively, you’ll provide stronger and more reliable healing for your party.</p>
+        </div>
+
+        <div id="mp-management" class="tabcontent" style="display:none;">
+            <h2>But What About MP?</h2>
+            <p>One concern might be the higher MP cost of <span class="cure2">Cure 2</span> (1000 MP compared to <span class="cure1">Cure 1</span>'s 400 MP). However, White Mages have access to <img src="48px-Lucid_Dreaming_Icon.png" alt="Lucid Dreaming Icon"> <strong>Lucid Dreaming</strong>, an ability that regenerates MP over time.</p>
+            <ul>
+                <li><strong>Lucid Dreaming:</strong> Unlocked at level 24, this ability restores a significant amount of MP over 21 seconds, allowing you to sustain your healing output without running out of MP.</li>
+                <li>By using <img src="48px-Lucid_Dreaming_Icon.png" alt="Lucid Dreaming Icon"> Lucid Dreaming effectively, you should <strong>never run out of MP</strong> in typical encounters, making the higher MP cost of <span class="cure2">Cure 2</span> a non-issue.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="resources">
+        <h2>Learn More</h2>
+        <p>Check out these resources for more tips on healing in FFXIV:</p>
+        <ul>
+            <li><a href="https://www.thebalanceffxiv.com/jobs/healers/white-mage/" target="_blank">The Balance White Mage Guide</a></li>
+        </ul>
+    </section>
+    
+    <section id="other-projects">
+        <h2>My Other FFXIV Projects</h2>
+        <ul>
+            <li><a href="https://suspence00.github.io/ffxivabilitityguessinggame/" target="_blank">FFXIV Ability Guessing Game</a> - Test your knowledge by guessing abilities based on their icons.</li>
+            <li><a href="https://suspence00.github.io/ffxivbossguessinggame/" target="_blank">FFXIV Boss Guessing Game</a> - Challenge yourself to guess bosses by their images.</li>
+        </ul>
+    </section>    
+</main>
+</body>
+</html>
+ 
