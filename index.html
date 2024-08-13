@@ -41,58 +41,93 @@
     </header>
 
     <main>
+        <p><a href="#welcome">This information is presented with good intentions</a></p>
         <p>The information below is presented as a gathering of information designed to help WHMs on the intricacies of
             <span class="cure1">Cure 1</span> vs <span class="cure2">Cure 2</span>.
+        <P>FFXIV does not currently do a good job showcasing this, and it's easy to understand why a WHM might think
+            <span class="cure1">Cure 1</span> is the right option.
+        </P>
+        <p>However, for the various reasons below, <span class="cure2">Cure 2</span> is always better to use than <span
+                class="cure1">Cure 1</span> This is a WHM problem that hopefully Squenix addresses someday. Untill
+            then...</p>
         </p>
-        <p><a href="#welcome">This information is presented with good intentions</a></p>
+
         <section id="tldr" class="tldr-box">
             <h2>TL;DR</h2>
             <p>Once you unlock <span class="cure2">Cure 2</span> at level 30, you should always use it instead of <span
                     class="cure1">Cure 1</span>. </p>
             <p><span class="cure2">Cure 2</span> heals for 700 potency and is the better choice in almost every
-                situation, even at its increased MP cost.</p>
-            <p><b>Use Cure 2. Don’t rely on <span class="cure1">Cure 1</span> just to save MP or try for Free Cure
-                    procs</b></p>
+                situation.</p>
+            <p><b>Use <span class="cure2">Cure 2</span>. Don’t use <span class="cure1">Cure 1</span> just to save MP or
+                    try for Freecure procs.</b></p>
         </section>
 
         <section id="tabbed-content">
             <div class="tab">
+                <button class="tablinks" onclick="openTab('simple')">Simple Explanations</button>
                 <button class="tablinks" onclick="openTab('detailed')">Detailed Explanations</button>
                 <button class="tablinks" onclick="openTab('freecure')">Why Freecure is a Trap</button>
                 <button class="tablinks" onclick="openTab('mp-management')">What about MP?</button>
                 <button class="tablinks" onclick="openTab('cast-recast-times')">But the cast times!</button>
             </div>
 
+            <div id="simple" class="tabcontent" style="display:block;">
+                <h2>Simple Explanation</h2>
+                <p><span class="cure2">Cure 2</span> heals more per cast compared to <span class="cure1">Cure 1</span>,
+                    which means you can restore health with fewer casts.</p>
+                <ul>
+                    <li><span class="cure1">Cure 1</span> heals for 400 potency per cast.</li>
+                    <li><span class="cure2">Cure 2</span> heals for 700 potency per cast.</li>
+                    <li>Because <span class="cure2">Cure 2</span> heals more per cast, you spend less time healing and
+                        more time dealing damage.</li>
+                </ul>
+                <p>Using <span class="cure2">Cure 2</span> allows you to heal your party members quicker, giving you
+                    more opportunities to contribute to damage output.</p>
+                <p><a href="#tabbed-content"><u>To Top</u></a></p>
+            </div>
+
             <div id="detailed" class="tabcontent" style="display:none;">
                 <h2>In-Depth Explanation with Potency Over Time</h2>
-                <p>Let’s break down the potency over time and the speed of healing to see why <span class="cure2">Cure
-                        2</span> is more effective:</p>
+                <p>Let’s break down the potency over a more realistic dungeon scenario to see why <span
+                        class="cure2">Cure 2</span> is more effective:</p>
 
-                <h3>Example Scenario: Potency Over Time</h3>
+                <h3>Example Scenario: Healing a Tank During Dungeon Pulls</h3>
+                <p>When tanking in a dungeon, a common scenario is the tank pulling multiple groups of enemies
+                    Wall2Wall. During
+                    these pulls, the tank takes steady damage and needs to be kept alive while also dealing damage:</p>
                 <ul>
-                    <li><span class="cure1">Cure 1</span>: Heals for 400 potency per cast. With a global cooldown (GCD)
-                        of 2.5 seconds, you can cast <span class="cure1">Cure 1</span> approximately 24 times in 60
-                        seconds, resulting in 9600 potency over that time.</li>
-                    <li><span class="cure2">Cure 2</span>: Heals for 700 potency per cast. With the same GCD of 2.5
-                        seconds, you can cast <span class="cure2">Cure 2</span> approximately 24 times in 60 seconds,
-                        resulting in 16800 potency over that time.</li>
+                    <li><span class="cure1">Cure 1</span>: Heals for 400 potency per cast. You might need to cast <span
+                            class="cure1">Cure 1</span> multiple times to keep the tank's HP stable, spending more GCDs
+                        on healing.</li>
+                    <li><span class="cure2">Cure 2</span>: Heals for 700 potency per cast. With fewer casts needed to
+                        stabilize the tank's HP, you have more time to cast offensive spells.</li>
                 </ul>
-                <p>This means that by using <span class="cure2">Cure 2</span>, you’re getting an additional <strong>7200
-                        potency</strong> over the same 60 seconds compared to <span class="cure1">Cure 1</span>. This is
-                    a substantial increase in healing output, which can be crucial in high-stakes combat situations.</p>
+                <p>For example, if the tank takes damage that requires 1200 potency of healing to stabilize:</p>
+                <ul>
+                    <li><span class="cure1">Cure 1</span>: Requires three casts (7.5 seconds) to provide 1200 potency of
+                        healing.</li>
+                    <li><span class="cure2">Cure 2</span>: Requires only two casts (5 seconds) to provide 1400 potency
+                        of healing, allowing you to switch back to dealing damage sooner.</li>
+                </ul>
+                <p>By using <span class="cure2">Cure 2</span>, you can reduce the time spent healing and increase your
+                    uptime on damage-dealing abilities, which is crucial in optimizing dungeon runs.</p>
 
-                <h3>Example Scenario: Speed of Healing a Tank Under Heavy Damage</h3>
+                <h3>Example Scenario: Tanking a Dungeon Boss</h3>
+                <p>In a dungeon boss fight, maintaining both tank and party member HP while also contributing to damage
+                    is essential:</p>
                 <ul>
-                    <li><span class="cure1">Cure 1</span>: Heals for 400 potency every 2.5 seconds. If a tank is taking
-                        rapid damage, you might need to cast <span class="cure1">Cure 1</span> multiple times to
-                        stabilize their HP. After 10 seconds (4 casts), you will have healed for 1600 potency.</li>
-                    <li><span class="cure2">Cure 2</span>: Heals for 700 potency every 2.5 seconds. In the same 10
-                        seconds (4 casts), <span class="cure2">Cure 2</span> will have healed for 2800 potency.</li>
+                    <li><span class="cure1">Cure 1</span>: Heals for 400 potency per cast. To keep the tank's HP stable,
+                        you might need to cast <span class="cure1">Cure 1</span> repeatedly, reducing your opportunity
+                        to deal damage.</li>
+                    <li><span class="cure2">Cure 2</span>: Heals for 700 potency per cast. Fewer casts are needed to
+                        stabilize the tank, allowing you to use the extra GCDs for damage spells like <span
+                            class="damage-spell">Glare</span>.</li>
                 </ul>
-                <p>In this scenario, <span class="cure2">Cure 2</span> provides <strong>1200 additional potency</strong>
-                    over just 10 seconds compared to <span class="cure1">Cure 1</span>. This faster and more effective
-                    healing can be the difference between a tank surviving or falling during heavy damage phases.</p>
+                <p>In a boss fight where every bit of damage counts, <span class="cure2">Cure 2</span> provides more
+                    efficient healing, enabling you to contribute more to the fight's overall DPS.</p>
+
                 <p><a href="#tabbed-content"><u>To Top</u></a></p>
+            </div>
             </div>
 
             <div id="freecure" class="tabcontent" style="display:none;">
@@ -108,7 +143,7 @@
                     spend 17.5 seconds healing for 2800 potency, and you might get 1 free <span class="cure2">Cure
                         2</span> cast.</p>
 
-                <h3>Potency Comparison:</h3>
+                <h3>Potency and Damage Output Comparison:</h3>
                 <ul>
                     <li><strong>7x <span class="cure1">Cure 1</span> + 1x <span class="cure2">Cure 2</span>
                             (Free):</strong>
@@ -131,16 +166,21 @@
                     MP but achieves the same amount of healing in 37.5% less time. In critical situations where healing
                     efficiency matters, time and GCD efficiency are much more crucial than MP efficiency.</p>
 
-                <h3>Wasted Time and MP:</h3>
+                <h3>Impact on Damage Output:</h3>
                 <p>Every time you cast <span class="cure1">Cure 1</span> hoping for a Freecure proc, you’re spending
-                    more GCDs and potentially more MP on weaker heals, rather than directly providing stronger healing
-                    with <span class="cure2">Cure 2</span>.</p>
+                    more GCDs on weaker heals instead of using those GCDs to contribute to your party's damage output.
+                    The time you save by using <span class="cure2">Cure 2</span> directly translates to more
+                    opportunities to cast damage-dealing spells like <span class="damage-spell">Glare</span> or <span
+                        class="damage-spell">Dia</span>.</p>
 
-                <p>In most situations, the guaranteed healing output of <span class="cure2">Cure 2</span> far outweighs
-                    the potential MP savings from Freecure. By focusing on <span class="cure2">Cure 2</span> and using
-                    <img src="48px-Lucid_Dreaming_Icon.png" alt="Lucid Dreaming Icon"> Lucid Dreaming effectively,
-                    you’ll provide stronger and more reliable healing for your party.</p>
+                <p>In most situations, the guaranteed healing output and time savings of <span class="cure2">Cure
+                        2</span> far outweigh the potential MP savings from Freecure. By focusing on <span
+                        class="cure2">Cure 2</span> and using <img src="48px-Lucid_Dreaming_Icon.png"
+                        alt="Lucid Dreaming Icon"> Lucid Dreaming effectively, you’ll not only provide stronger and more
+                    reliable healing for your party but also maximize your contribution to overall damage output.</p>
+                    <p><a href="#tabbed-content"><u>To Top</u></a></p>
             </div>
+
 
 
 
@@ -191,20 +231,30 @@
 
         </section>
         <section id="welcome">
-            <h2>If Someone Sent You This, Don’t Take It Rudely</h2>
+            <h2>If Someone Sent You This...</h2>
+            <p><b>This is a WHM problem and not a user problem</b>, as it's easy to intuit why, on paper,
+                <span class="cure1">Cure 1</span> seems like the right choice.
+            </p>
             <p>
-                The intent behind sending you this page isn’t to criticize or belittle your gameplay.
-                <strong>Final Fantasy XIV</strong> is a team-based game where success relies heavily on cooperation and
-                understanding among all party members. When everyone plays optimally, the entire group benefits, leading
-                to smoother runs, faster clears, and a more enjoyable experience for everyone.
+                The intent behind this guide isn’t to criticize or belittle anyones gameplay. This is a niche, overly
+                detailed guide to be shared amongst the community to help everyone be better.
+
+                This isn't meant to be taken hyper seriously, as in higher level content you will have oGCDs and Lillies
+                to
+                compensate for healing and should rarely need to use Cure 2 at all.
+                This is most relevant in late-ARR content where Cure 1 spam can lead to rocky Stone Vigils.
+            </p>
+            <p>
+
             </p>
             <p>
                 It’s not toxic or negative to want to help others improve; in fact, it’s a sign of respect and
-                camaraderie.
-                Taking a moment to learn and adjust can make a huge difference not just for you, but for your entire
+                camaraderie. Taking a moment to learn and adjust can make a huge difference not just for you, but for
+                your entire
                 party.
-                Remember, we’re all here for smooth and quick encounters!
+                May our healers be optimal and our tanks and DPS sustained!
             </p>
+            
         </section>
 
         <section id="resources">
