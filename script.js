@@ -190,9 +190,9 @@ document.addEventListener('DOMContentLoaded', function () {
             // Cure 1 is based actually
             const headerText = document.querySelector('header h1');
             headerText.innerHTML = `
-                <img src="48px-Cure_Icon.png" alt="Cure 1 Icon">
-                STOP USING <span class="cure2-header">Cure 2</span>, USE <span class="cure1">Cure 1</span>
                 <img src="48px-Cure_II_Icon.png" alt="Cure 2 Icon">
+                STOP USING <span class="cure2-header">Cure 2</span>, USE <span class="cure1">Cure 1</span>
+                <img src="48px-Cure_Icon.png" alt="Cure 1 Icon">
             `;
 
             const tldrText = document.querySelector('#tldr');
