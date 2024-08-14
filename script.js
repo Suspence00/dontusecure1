@@ -56,9 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
         elements.tldrText.innerHTML = `
             <h2>TL;DR</h2>
-            <p>Once you unlock <span class="cure2">${firstCureText}</span> at level 30, you should always use it instead of <span class="cure1">${secondCureText}</span>.</p>
-            <p><span class="cure2">${firstCureText}</span> heals for 700 potency and is the better choice in almost every situation.</p>
-            <p><b>Use <span class="cure2">${firstCureText}</span>. Don’t use <span class="cure1">${secondCureText}</span> just to save MP or try for Freecure procs.</b></p>
+            <p>Once you unlock <span class="cure2">${secondCureText}</span> at level 30, you should always use it instead of <span class="cure1">${firstCureText}</span>.</p>
+            <p><span class="cure2">${secondCureText}</span> heals for 700 potency and is the better choice in almost every situation.</p>
+            <p><b>Use <span class="cure2">${secondCureText}</span>. Don’t use <span class="cure1">${firstCureText}</span> just to save MP or try for Freecure procs.</b></p>
         `;
     
         document.querySelector('button[onclick*="openTab(\'freecure\'"]').textContent = freecureTabText;
