@@ -8,20 +8,32 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico?" type="image/x-icon">
     <script>
-        // Function to open a tab
-        function openTab(tabName) {
+        function openTab(tabName, element) {
             var i;
             var x = document.getElementsByClassName("tabcontent");
             var tablinks = document.getElementsByClassName("tablinks");
+
+            // Hide all tab content
             for (i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
             }
+
+            // Remove the 'active' class from all tablinks
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
+
+            // Show the current tab content and add 'active' class to the clicked tab
             document.getElementById(tabName).style.display = "block";
-            event.currentTarget.className += " active";
+            if (element) {
+                element.className += " active";
+            }
+
+            // Prevent default anchor behavior
+            if (event) event.preventDefault();
         }
+
+
 
         // Open the first tab by default
         document.addEventListener("DOMContentLoaded", function () {
@@ -41,8 +53,10 @@
     </header>
 
     <main>
-        <p><a href="#welcome">This information is presented with good intentions</a></p>
-        <p>The information below is presented as a gathering of information designed to help WHMs on the intricacies using
+        <p><a href="#ifsomeone" onclick="openTab('ifsomeone', document.querySelector('.tab button:nth-child(6)'))">This
+                information is presented with good intentions</a></p>
+        <p>The information below is presented as a gathering of information designed to help WHMs on the intricacies
+            using
             <span class="cure2">Cure 2</span> over <span class="cure1">Cure 1</span>.
         <P>FFXIV does not currently do a good job showcasing this, and it's easy to understand why a WHM might think
             <span class="cure1">Cure 1</span> is the right option.
@@ -64,11 +78,12 @@
 
         <section id="tabbed-content">
             <div class="tab">
-                <button class="tablinks" onclick="openTab('simple')">Simple Explanations</button>
-                <button class="tablinks" onclick="openTab('detailed')">Detailed Explanations</button>
-                <button class="tablinks" onclick="openTab('freecure')">Why Freecure is a Trap</button>
-                <button class="tablinks" onclick="openTab('mp-management')">What about MP?</button>
-                <button class="tablinks" onclick="openTab('cast-recast-times')">But the cast times!</button>
+                <button class="tablinks" onclick="openTab('simple', this)">Simple Explanations</button>
+                <button class="tablinks" onclick="openTab('detailed', this)">Detailed Explanations</button>
+                <button class="tablinks" onclick="openTab('freecure', this)">Why Freecure is a Trap</button>
+                <button class="tablinks" onclick="openTab('mp-management', this)">What about MP?</button>
+                <button class="tablinks" onclick="openTab('cast-recast-times', this)">But the cast times!</button>
+                <button class="tablinks" onclick="openTab('ifsomeone', this)">About this Guide</button>
             </div>
 
             <div id="simple" class="tabcontent" style="display:block;">
@@ -178,7 +193,7 @@
                         class="cure2">Cure 2</span> and using <img src="48px-Lucid_Dreaming_Icon.png"
                         alt="Lucid Dreaming Icon"> Lucid Dreaming effectively, you’ll not only provide stronger and more
                     reliable healing for your party but also maximize your contribution to overall damage output.</p>
-                    <p><a href="#tabbed-content"><u>To Top</u></a></p>
+                <p><a href="#tabbed-content"><u>To Top</u></a></p>
             </div>
 
 
@@ -230,7 +245,7 @@
             </div>
 
         </section>
-        <section id="welcome">
+        <section id="ifsomeone" class="tabcontent" style="display:none;">
             <h2>If Someone Sent You This...</h2>
             <p><b>This is a WHM problem and not a user problem</b>, as it's easy to intuit why, on paper,
                 <span class="cure1">Cure 1</span> seems like the right choice.
@@ -254,7 +269,7 @@
                 party.
                 May our healers be optimal and our tanks and DPS sustained!
             </p>
-            
+
         </section>
 
         <section id="resources">

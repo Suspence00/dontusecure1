@@ -1,103 +1,124 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
+/* Header */
 header {
-    background: #333;
-    color: #fff;
+    background: #1f1f1f;
+    color: #e0e0e0;
     padding: 20px 0;
     text-align: center;
     font-size: 1.5em;
+    border-bottom: 1px solid #333;
 }
 
+/* Main Content */
 main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background: #fff;
+    background: #1f1f1f;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 h1, h2, h3 {
-    color: #333;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #333;
-    color: #fff;
-    margin-top: 20px;
+    color: #e0e0e0;
 }
 
 a {
-    color: #1e90ff;
+    color: #64b5f6;
 }
 
 .highlight {
     font-weight: bold;
-    color: #d9534f;
+    color: #ff6f61;
 }
 
 .cure1 {
-    color: red;
+    color: #ef5350;
     font-weight: bold;
 }
 
 .cure2 {
-    color: green;
+    color: #66bb6a;
     font-weight: bold;
-    text-shadow: 0 0 10px #00ff00;
+    text-shadow: 0 0 10px #66bb6a;
 }
 
+.cure2-header {
+    color: #81c784; /* A readable green */
+    font-weight: bold;
+}
+
+/* Tabs */
 .tab {
     overflow: hidden;
-    border-bottom: 1px solid #ccc;
-    background-color: #f1f1f1;
+    border-bottom: 1px solid #444;
+    background-color: #333;
+    border-radius: 8px 8px 0 0;
 }
 
 .tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
+    background-color: #444;
+    border: 1px solid #555;
+    border-radius: 4px 4px 0 0;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 15px 15px;
     transition: 0.3s;
     font-size: 17px;
+    color: #e0e0e0;
+    box-sizing: border-box;
 }
 
 .tab button:hover {
-    background-color: #ddd;
+    background-color: #555;
 }
 
 .tab button.active {
-    background-color: #ccc;
+    background-color: #666;
+    color: #64b5f6;
+    position: relative;
 }
 
+/* Tab Content */
 .tabcontent {
     display: none;
     padding: 20px;
-    border-top: none;
+    border-top: 2px solid #64b5f6; /* To make it match the active tab */
+    background-color: #222;
+    border-radius: 0 8px 8px 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: -1px; /* Avoid gap */
 }
-.cure2-header {
-    color: #28a745; /* A readable green */
-    font-weight: bold;
-}
+
+/* TL;DR Box */
 .tldr-box {
-    background-color: #f9f9f9; /* Light background color */
-    border: 2px solid #333; /* Dark border for contrast */
+    background-color: #2e2e2e; /* Slightly lighter background */
+    border: 2px solid #444; /* Dark border */
     padding: 20px;
     margin: 20px 0;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
 }
+
 .tldr-box h2 {
     margin-top: 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1f1f1f;
+    color: #e0e0e0;
+    margin-top: 20px;
+    border-top: 1px solid #333;
 }
