@@ -55,11 +55,18 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     
         elements.tldrText.innerHTML = `
+            ${reversed ? ` 
+            <h2>TL;DR</h2>
+            <p>Once you unlock <span class="cure2">${secondCureText}</span> at level 2, you should always use it instead of <span class="cure1">${firstCureText}</span>.</p>
+            <p><span class="cure2">${secondCureText}</span> heals for 450 potency and is the better choice in almost every situation.</p>
+            <p><b>Use <span class="cure2">${secondCureText}</span>. Don’t use <span class="cure1">${firstCureText}</span> just to save MP or try for Freecure procs.</b></p>
+            ` : `
             <h2>TL;DR</h2>
             <p>Once you unlock <span class="cure2">${secondCureText}</span> at level 30, you should always use it instead of <span class="cure1">${firstCureText}</span>.</p>
             <p><span class="cure2">${secondCureText}</span> heals for 700 potency and is the better choice in almost every situation.</p>
             <p><b>Use <span class="cure2">${secondCureText}</span>. Don’t use <span class="cure1">${firstCureText}</span> just to save MP or try for Freecure procs.</b></p>
-        `;
+            `}
+            `;
     
         document.querySelector('button[onclick*="openTab(\'freecure\'"]').textContent = freecureTabText;
         elements.freecureText.innerHTML = `
@@ -72,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <ul>
                 <li><strong>7x <span class="cure1">Cure 1</span> + 1x <span class="cure2">Cure 2</span> (Free):</strong>
                     <ul>
-                        <li>Healing potency: 7x400 (Cure 1) + 700 (Cure 2) = 3500 potency</li>
+                        <li>Healing potency: 7x450 (Cure 1) + 700 (Cure 2) = 3850 potency</li>
                         <li>Global Cooldowns (GCD): 8 GCDs</li>
                         <li>MP cost: 7x400 = 2800 MP</li>
                     </ul>
@@ -94,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <ul>
                 <li><strong>7x <span class="cure1">Cure 1</span> + 1x <span class="cure2">Cure 2</span> (Free):</strong>
                     <ul>
-                        <li>Healing potency: 7x400 (Cure 1) + 700 (Cure 2) = 3500 potency</li>
+                        <li>Healing potency: 7x450 (Cure 1) + 700 (Cure 2) = 3850 potency</li>
                         <li>Global Cooldowns (GCD): 8 GCDs</li>
                         <li>MP cost: 7x400 = 2800 MP</li>
                     </ul>
@@ -107,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </ul>
                 </li>
             </ul>
-            <p>This comparison shows that using <span class="cure2">Cure 2</span> only costs approximately 79% more MP but achieves the same amount of healing in 37.5% less time. In critical situations where healing efficiency matters, time and GCD efficiency are much more crucial than MP efficiency.</p>
+            <p>This comparison shows that using <span class="cure2">Cure 2</span> costs more MP but achieves the same amount of healing in 37.5% less time. In critical situations where healing efficiency matters, time and GCD efficiency are much more crucial than MP efficiency.</p>
             <h3>Impact on Damage Output:</h3>
             <p>Every time you cast <span class="cure1">Cure 1</span> hoping for a Freecure proc, you’re spending more GCDs on weaker heals instead of using those GCDs to contribute to your party's damage output. The time you save by using <span class="cure2">Cure 2</span> directly translates to more opportunities to cast damage-dealing spells like <span class="damage-spell">Glare</span> or <span class="damage-spell">Dia</span>.</p>
             <p>In most situations, the guaranteed healing output and time savings of <span class="cure2">Cure 2</span> far outweigh the potential MP savings from Freecure. By focusing on <span class="cure2">Cure 2</span> and using <img src="48px-Lucid_Dreaming_Icon.png" alt="Lucid Dreaming Icon"> Lucid Dreaming effectively, you’ll not only provide stronger and more reliable healing for your party but also maximize your contribution to overall damage output.</p>
@@ -120,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ${reversed ? `
             <p><span class="cure1">Cure 1</span> is more MP efficient and allows for Freecure procs compared to <span class="cure2">Cure 2</span>.</p>
             <ul>
-                <li><span class="cure1">Cure 1</span> heals for 400 potency per cast.</li>
+                <li><span class="cure1">Cure 1</span> heals for 450 potency per cast.</li>
                 <li><span class="cure2">Cure 2</span> heals for 700 potency per cast but costs more MP.</li>
                 <li>Because <span class="cure1">Cure 1</span> is more efficient, you spend less MP on healing and can save MP for other abilities.</li>
             </ul>
@@ -128,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ` : `
             <p><span class="cure2">Cure 2</span> heals more per cast compared to <span class="cure1">Cure 1</span>, which means you can restore health with fewer casts.</p>
             <ul>
-                <li><span class="cure1">Cure 1</span> heals for 400 potency per cast.</li>
+                <li><span class="cure1">Cure 1</span> heals for 450 potency per cast.</li>
                 <li><span class="cure2">Cure 2</span> heals for 700 potency per cast.</li>
                 <li>Because <span class="cure2">Cure 2</span> heals more per cast, you spend less time healing and more time dealing damage.</li>
             </ul>
@@ -144,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3>Example Scenario: Healing a Tank During Dungeon Pulls</h3>
             <p>When tanking in a dungeon, a common scenario is the tank pulling multiple groups of enemies. During these pulls, the tank takes steady damage and needs to be kept alive while also dealing damage:</p>
             <ul>
-                <li><span class="cure1">Cure 1</span>: Heals for 400 potency per cast and costs 400 MP.</li>
+                <li><span class="cure1">Cure 1</span>: Heals for 450 potency per cast and costs 450 MP.</li>
                 <li><span class="cure2">Cure 2</span>: Heals for 700 potency per cast but costs 1000 MP.</li>
             </ul>
             <p>If the tank takes 1200 potency worth of damage:</p>
@@ -152,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li>Using <span class="cure1">Cure 1</span>:
                     <ul>
                         <li>3 casts of <span class="cure1">Cure 1</span> provide 1200 potency of healing.</li>
-                        <li>MP Cost: 3 x 400 MP = 1200 MP</li>
+                        <li>MP Cost: 3 x 450 MP = 1350 MP</li>
                         <li>Time Spent: 3 casts x 2.5s per cast = 7.5 seconds</li>
                     </ul>
                 </li>
@@ -177,19 +184,19 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3>Example Scenario: Healing a Tank During Dungeon Pulls</h3>
             <p>When tanking in a dungeon, a common scenario is the tank pulling multiple groups of enemies Wall2Wall. During these pulls, the tank takes steady damage and needs to be kept alive while also dealing damage:</p>
             <ul>
-                <li><span class="cure1">Cure 1</span>: Heals for 400 potency per cast. You might need to cast <span class="cure1">Cure 1</span> multiple times to keep the tank's HP stable, spending more GCDs on healing.</li>
+                <li><span class="cure1">Cure 1</span>: Heals for 450 potency per cast. You might need to cast <span class="cure1">Cure 1</span> multiple times to keep the tank's HP stable, spending more GCDs on healing.</li>
                 <li><span class="cure2">Cure 2</span>: Heals for 700 potency per cast. With fewer casts needed to stabilize the tank's HP, you have more time to cast offensive spells.</li>
             </ul>
             <p>For example, if the tank takes damage that requires 1200 potency of healing to stabilize:</p>
             <ul>
-                <li><span class="cure1">Cure 1</span>: Requires three casts (7.5 seconds) to provide 1200 potency of healing.</li>
+                <li><span class="cure1">Cure 1</span>: Requires three casts (7.5 seconds) to provide 1350 potency of healing.</li>
                 <li><span class="cure2">Cure 2</span>: Requires only two casts (5 seconds) to provide 1400 potency of healing, allowing you to switch back to dealing damage sooner.</li>
             </ul>
             <p>By using <span class="cure2">Cure 2</span>, you can reduce the time spent healing and increase your uptime on damage-dealing abilities, which is crucial in optimizing dungeon runs.</p>
             <h3>Example Scenario: Tanking a Dungeon Boss</h3>
             <p>In a dungeon boss fight, maintaining both tank and party member HP while also contributing to damage is essential:</p>
             <ul>
-                <li><span class="cure1">Cure 1</span>: Heals for 400 potency per cast. To keep the tank's HP stable, you might need to cast <span class="cure1">Cure 1</span> repeatedly, reducing your opportunity to deal damage.</li>
+                <li><span class="cure1">Cure 1</span>: Heals for 450 potency per cast. To keep the tank's HP stable, you might need to cast <span class="cure1">Cure 1</span> repeatedly, reducing your opportunity to deal damage.</li>
                 <li><span class="cure2">Cure 2</span>: Heals for 700 potency per cast. Fewer casts are needed to stabilize the tank, allowing you to use the extra GCDs for damage spells like <span class="damage-spell">Glare</span>.</li>
             </ul>
             <p>In a boss fight where every bit of damage counts, <span class="cure2">Cure 2</span> provides more efficient healing, enabling you to contribute more to the fight's overall DPS.</p>
