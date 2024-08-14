@@ -122,3 +122,51 @@ footer {
     margin-top: 20px;
     border-top: 1px solid #333;
 }
+.reverse-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.reverse-mode header, 
+.reverse-mode main, 
+.reverse-mode footer {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+.reverse-mode .cure1 {
+    color: #66bb6a;
+}
+
+.reverse-mode .cure2 {
+    color: #ef5350;
+}
+
+.reverse-mode .cure1-header {
+    color: #81c784;
+}
+.reverse-mode .tldr-box h2{
+    color: #81c784;
+}
+.reverse-mode .tabcontent h2{
+    color: #81c784;
+}
+
+.reverse-mode .tabcontent h3{
+    color: #679e6a;
+}
+
+.reverse-mode .cure2-header {
+    color: #ef5350;
+}
+.reverse-mode .tldr-box {
+    background-color: #ffe0e0; /* Lighter red background */
+    border: 2px solid #ff6666; /* Red border */
+    color: #333; /* Dark text */
+}
+
+.reverse-mode .tabcontent {
+    background-color: #fff0f0; /* Light red background */
+    border-top: 2px solid #ff6666; /* Red border for active tab */
+    color: #333; /* Dark text */
+}
