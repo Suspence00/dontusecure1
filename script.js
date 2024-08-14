@@ -255,8 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const loadTimeDisplay = document.createElement('p');
         loadTimeDisplay.innerHTML = `
             Page loaded in ${loadTime.toFixed(2)} ms <br>
-            Twitter/X:<a href="https://twitter.com/MajorPropsYT" target="_blank">@MajorPropsYT</a><br>
-            <img src="vanillajs.png" alt="Vanilla JS badge"> <br>
+            Made with 💜 by Twitter/X:<a href="https://twitter.com/MajorPropsYT" target="_blank">@MajorPropsYT</a><br>
         `;
         elements.ifSomeoneText.appendChild(loadTimeDisplay);
     }
