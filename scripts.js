@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h2>TL;DR</h2>
             <p>Once you unlock <span class="cure2">${secondCureText}</span> at level 2, you should always use it instead of <span class="cure1">${firstCureText}</span>.</p>
             <p><span class="cure2">${secondCureText}</span> heals for a huge 450 potency and is the better choice in almost every situation.</p>
-            <p><b>Use <span class="cure2">${secondCureText}</span>. Don’t use <span class="cure1">${firstCureText}</span> to save MP try for Freecure procs.</b></p>
+            <p><b>Use <span class="cure2">${secondCureText}</span>. Don’t use <span class="cure1">${firstCureText}</span> to save MP + try for Freecure procs.</b></p>
             ` : `
             <h2>TL;DR</h2>
             <p>Once you unlock <span class="cure2">${secondCureText}</span> at level 30, you should always use it instead of <span class="cure1">${firstCureText}</span>.</p>
