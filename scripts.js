@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === konamiCode[konamiIndex]) {
             konamiIndex++;
             if (konamiIndex === konamiCode.length) {
-                toggleEasterEgg();
+                cure1IsBased();
                 konamiIndex = 0;
             }
         } else {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    function toggleEasterEgg() {
+    function cure1IsBased() {
         isReversed = !isReversed;
         document.body.classList.toggle('reverse-mode');
         swapContent(isReversed);
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     function addTopBitContent(isReversed) {
         const existingTopBit = document.querySelector('#top-bit');
-        if (existingTopBit) existingTopBit.remove(); // Remove the existing top bit if present
+        if (existingTopBit) existingTopBit.remove(); 
     
         const topBitContent = document.createElement('div');
         topBitContent.id = 'top-bit';
@@ -298,8 +298,6 @@ document.addEventListener('DOMContentLoaded', () => {
         addTopBitContent(false);
         swapContent(false);
     }
-
-    // Attach the openTab function globally for use in the HTML
     window.openTab = openTab;
 });
 

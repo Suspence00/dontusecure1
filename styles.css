@@ -53,7 +53,7 @@ a {
 }
 
 .cure2-header {
-    color: #81c784; /* A readable green */
+    color: #81c784; 
     font-weight: bold;
 }
 
@@ -92,21 +92,21 @@ a {
 .tabcontent {
     display: none;
     padding: 20px;
-    border-top: 2px solid #64b5f6; /* To make it match the active tab */
+    border-top: 2px solid #64b5f6; 
     background-color: #222;
     border-radius: 0 8px 8px 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-top: -1px; /* Avoid gap */
+    margin-top: -1px;
 }
 
 /* TL;DR Box */
 .tldr-box {
-    background-color: #2e2e2e; /* Slightly lighter background */
-    border: 2px solid #444; /* Dark border */
+    background-color: #2e2e2e; 
+    border: 2px solid #444; 
     padding: 20px;
     margin: 20px 0;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
 
 .tldr-box h2 {
@@ -160,13 +160,13 @@ footer {
     color: #ef5350;
 }
 .reverse-mode .tldr-box {
-    background-color: #ffe0e0; /* Lighter red background */
-    border: 2px solid #ff6666; /* Red border */
-    color: #333; /* Dark text */
+    background-color: #ffe0e0; 
+    border: 2px solid #ff6666; 
+    color: #333; 
 }
 
 .reverse-mode .tabcontent {
-    background-color: #fff0f0; /* Light red background */
-    border-top: 2px solid #ff6666; /* Red border for active tab */
-    color: #333; /* Dark text */
+    background-color: #fff0f0; 
+    border-top: 2px solid #ff6666; 
+    color: #333; 
 }
