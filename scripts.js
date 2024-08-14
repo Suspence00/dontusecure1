@@ -263,6 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
         loadTimeDisplay.innerHTML = `
             Page loaded in ${loadTime.toFixed(2)} ms <br>
             Made with 💜 by Twitter/X:<a href="https://twitter.com/MajorPropsYT" target="_blank">@MajorPropsYT</a><br>
+            Youtube: <a href="https://www.youtube.com/@MajorProps">https://www.youtube.com/@MajorProps</a><br>
         `;
         elements.ifSomeoneText.appendChild(loadTimeDisplay);
     }
