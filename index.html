@@ -4,49 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Don't Use Cure 1!</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Don't Use Cure 1! - FFXIV White Mage Guide</title>
+    <meta name="description" content="A comprehensive, math-backed guide explaining why White Mages in FFXIV should use Cure II instead of Cure I, updated for Dawntrail. Learn the truths about Freecure trap, MP management, and GCD optimization.">
+    <meta name="keywords" content="FFXIV, White Mage, WHM, Cure 1, Cure 2, Freecure, FFXIV guide, Dawntrail, FFXIV healing, MMO optimization">
+    <meta name="author" content="MajorProps">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Don't Use Cure 1! - FFXIV White Mage Guide">
+    <meta property="og:description" content="A detailed, math-backed breakdown of why White Mages should stop using Cure I and start using Cure II. Updated for Dawntrail (Patch 7.4).">
+    <meta property="og:image" content="og_banner.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="og_banner.png">
+    
+    <!-- Fonts & Styling -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico?" type="image/x-icon">
-    <script src="scripts.js?v=1.04" defer></script>
+    
+    <!-- Dynamic Logic -->
+    <script src="scripts.js?v=1.05" defer></script>
 </head>
 
 <body>
-    <header>
-        <h1 class="highlight"></h1>
-    </header>
+    <div class="app-container">
+        <header>
+            <h1 class="highlight header-title">
+                <!-- Dynamically populated by JS -->
+            </h1>
+        </header>
 
-    <main>
-        <section id="tldr" class="tldr-box"></section>
+        <main>
+            <!-- Content will be injected dynamically -->
+            
+            <section id="tldr" class="tldr-box">
+                <!-- Dynamically populated by JS -->
+            </section>
 
-        <section id="tabbed-content">
-            <div class="tab">
-                <button class="tablinks" onclick="openTab('simple', this)">Simple Explanations</button>
-                <button class="tablinks" onclick="openTab('detailed', this)">Detailed Explanations</button>
-                <button class="tablinks" onclick="openTab('freecure', this)">Why Freecure is a Trap</button>
-                <button class="tablinks" onclick="openTab('mp-management', this)">What about MP?</button>
-                <button class="tablinks" onclick="openTab('cast-recast-times', this)">But the cast times!</button>
-                <button class="tablinks" onclick="openTab('ifsomeone', this)">About this Guide</button>
+            <section id="tabbed-content" class="glass-panel">
+                <div class="tab">
+                    <button class="tablinks active" onclick="openTab('simple', this)">Simple</button>
+                    <button class="tablinks" onclick="openTab('detailed', this)">Detailed</button>
+                    <button class="tablinks" onclick="openTab('freecure', this)">Freecure Trap</button>
+                    <button class="tablinks" onclick="openTab('mp-management', this)">MP Management</button>
+                    <button class="tablinks" onclick="openTab('cast-recast-times', this)">Cast vs. Recast</button>
+                    <button class="tablinks" onclick="openTab('ifsomeone', this)">About</button>
+                </div>
+
+                <div class="tabcontent-container">
+                    <div id="simple" class="tabcontent" style="display: block;"></div>
+                    <div id="detailed" class="tabcontent"></div>
+                    <div id="freecure" class="tabcontent"></div>
+                    <div id="mp-management" class="tabcontent"></div>
+                    <div id="cast-recast-times" class="tabcontent"></div>
+                    <div id="ifsomeone" class="tabcontent"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="guide-intent-container-footer" style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                    <a href="#tabbed-content" class="guide-intent-link" onclick="openTab('ifsomeone', document.querySelector('.tab button:nth-child(6)'))">❖ About the Guide</a>
+                    <span class="footer-separator" style="color: var(--border-color); opacity: 0.7;">|</span>
+                    <a href="https://github.com/Suspence00/dontusecure1" target="_blank" class="guide-intent-link" style="display: inline-flex; align-items: center; gap: 4px;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+                <div class="vanilla-badge-wrapper">
+                    <span>Powering this page:</span>
+                    <a href="http://vanilla-js.com/" class="vanilla-link">
+                        <img src="vanillajs.png" alt="Vanilla JS badge" title="↑ ↑ ↓ ↓ ← → ← → B A">
+                    </a>
+                </div>
+                <div class="speed-badge" id="speed-badge">
+                    <span class="speed-icon">❖</span> Page loaded in <span id="load-time">--</span> ms
+                </div>
             </div>
-
-            <div id="simple" class="tabcontent"></div>
-            <div id="detailed" class="tabcontent"></div>
-            <div id="freecure" class="tabcontent"></div>
-            <div id="mp-management" class="tabcontent"></div>
-            <div id="cast-recast-times" class="tabcontent"></div>
-            <div id="ifsomeone" class="tabcontent"></div>
-        </section>
-
-        <section id="resources">
-            <h2>Learn More</h2>
-            <p>Check out the Balance guide on WHM for more information (no affiliation, just good info):</p>
-            <ul>
-                <li><a href="https://www.thebalanceffxiv.com/jobs/healers/white-mage/" target="_blank">The Balance White Mage Guide</a></li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        Made with <a href="http://vanilla-js.com/"><img src="vanillajs.png" alt="Vanilla JS badge" title="↑ ↑ ↓ ↓ ← → ← → B A"></a> <br>
-    </footer>
+        </footer>
+    </div>
 </body>
-
 </html>
