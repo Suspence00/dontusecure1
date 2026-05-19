@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
     let konamiIndex = 0;
     let isReversed = false;
-    const audio = new Audio('ff7cure.mp3');
+    const audio = new Audio('assets/ff7cure.mp3');
     let simInterval = null;
     let freecureSimInterval = null;
     let mpSimInterval = null;
@@ -40,9 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
             firstCureName: 'Cure I',
             secondCureName: 'Cure II',
             headerHtml: `
-                <img src="48px-Cure_Icon.png" alt="Cure I Icon">
+                <img src="assets/48px-Cure_Icon.png" alt="Cure I Icon">
                 STOP USING <span class="cure1-header">Cure I</span>, USE <span class="cure2">Cure II</span>
-                <img src="48px-Cure_II_Icon.png" alt="Cure II Icon">
+                <img src="assets/48px-Cure_II_Icon.png" alt="Cure II Icon">
             `,
             tldrHtml: `
                 <h2>
@@ -53,13 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="tldr-item">
                         <span class="tldr-badge badge-stop">STOP</span>
                         <div class="tldr-text">
-                            <strong style="color: var(--crimson-primary);">STOP USING CURE 1.</strong> At level 30+, remove <img src="48px-Cure_Icon.png" alt="Cure I Icon"> <span class="cure1">Cure I</span> from your hotbar completely.
+                            <strong style="color: var(--crimson-primary);">STOP USING CURE 1.</strong> At level 30+, remove <img src="assets/48px-Cure_Icon.png" alt="Cure I Icon"> <span class="cure1">Cure I</span> from your hotbar completely.
                         </div>
                     </div>
                     <div class="tldr-item">
                         <span class="tldr-badge badge-use">USE</span>
                         <div class="tldr-text">
-                            <strong style="color: var(--color-cure2);"><img src="48px-Cure_II_Icon.png" alt="Cure II Icon"> USE CURE II.</strong> It heals for <strong class="potency-highlight">800 potency</strong> (vs. 500 potency). Saving GCDs lets you cast more offensive spells.
+                            <strong style="color: var(--color-cure2);"><img src="assets/48px-Cure_II_Icon.png" alt="Cure II Icon"> USE CURE II.</strong> It heals for <strong class="potency-highlight">800 potency</strong> (vs. 500 potency). Saving GCDs lets you cast more offensive spells.
                         </div>
                     </div>
                     <div class="tldr-item">
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 <div class="potency-calc-box">
                     <div class="potency-calc-col">
-                        <h4>Option A: <img src="48px-Cure_Icon.png" alt="Cure I Icon"> Cure I Spam (3 GCDs)</h4>
+                        <h4>Option A: <img src="assets/48px-Cure_Icon.png" alt="Cure I Icon"> Cure I Spam (3 GCDs)</h4>
                         <ul>
                             <li><strong>Healing Done:</strong> 1,500 Potency (3 casts × 500)</li>
                             <li><strong>Damage Done:</strong> 0 Potency</li>
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </ul>
                     </div>
                     <div class="potency-calc-col">
-                        <h4>Option B: <img src="48px-Cure_II_Icon.png" alt="Cure II Icon"> Cure II + <img src="Glare_III.png" alt="Glare III Icon"> Glare III (3 GCDs)</h4>
+                        <h4>Option B: <img src="assets/48px-Cure_II_Icon.png" alt="Cure II Icon"> Cure II + <img src="assets/Glare_III.png" alt="Glare III Icon"> Glare III (3 GCDs)</h4>
                         <ul>
                             <li><strong>Healing Done:</strong> 1,600 Potency (2 casts × 800)</li>
                             <li><strong>Damage Done:</strong> 350 Potency (1 cast × 350)</li>
@@ -111,8 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h3>Key Takeaways</h3>
                 <ul>
                     <li><strong>Saves Time:</strong> You achieved <em>more</em> healing in only 2 casts (5.0s) than Cure I did in 3 casts (7.5s).</li>
-                    <li><strong>Enables Damage:</strong> That extra 2.5 seconds (1 GCD) allows you to cast a DPS spell like <img src="Glare_III.png" alt="Glare III Icon"> <span class="damage-spell">Glare III</span> to help defeat enemies faster.</li>
-                    <li><strong>MP is a Resource:</strong> While Cure II costs more MP, your MP is meant to be spent. Use your MP management tools (like <img src="48px-Lucid_Dreaming_Icon.png" alt="Lucid Dreaming Icon"> Lucid Dreaming and Assize) to keep your mana healthy.</li>
+                    <li><strong>Enables Damage:</strong> That extra 2.5 seconds (1 GCD) allows you to cast a DPS spell like <img src="assets/Glare_III.png" alt="Glare III Icon"> <span class="damage-spell">Glare III</span> to help defeat enemies faster.</li>
+                    <li><strong>MP is a Resource:</strong> While Cure II costs more MP, your MP is meant to be spent. Use your MP management tools (like <img src="assets/48px-Lucid_Dreaming_Icon.png" alt="Lucid Dreaming Icon"> Lucid Dreaming and Assize) to keep your mana healthy.</li>
                 </ul>
                 
                 <p><a href="#tabbed-content"><u>To Top</u></a></p>
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </ul>
                     </li>
                 </ul>
-                <p>Using <img src="48px-Cure_II_Icon.png" alt="Cure II Icon"> <span class="cure2">Cure II</span> directly achieves similar healing in <strong>37.5% less time</strong> (saving 3 full GCDs). Those saved GCDs allow you to cast damage spells like <img src="Glare_III.png" alt="Glare III Icon"> <span class="damage-spell">Glare III</span> or <span class="damage-spell">Dia</span> to defeat enemies faster, which naturally reduces the total damage the tank takes.</p>
+                <p>Using <img src="assets/48px-Cure_II_Icon.png" alt="Cure II Icon"> <span class="cure2">Cure II</span> directly achieves similar healing in <strong>37.5% less time</strong> (saving 3 full GCDs). Those saved GCDs allow you to cast damage spells like <img src="assets/Glare_III.png" alt="Glare III Icon"> <span class="damage-spell">Glare III</span> or <span class="damage-spell">Dia</span> to defeat enemies faster, which naturally reduces the total damage the tank takes.</p>
                 
                 <h3>Damage is Healing</h3>
                 <p>In FFXIV, the best healing is killing the enemy faster. Every GCD wasted on a weak Cure I is a GCD not spent on damage. Trust your massive MP management toolkit and stop relying on RNG traps.</p>
@@ -178,43 +178,43 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="sim-slots freecure-slots">
                                 <div class="sim-slot" id="slot-freecure-a-1">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-a-1"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 1</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-a-2">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-a-2"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 2</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-a-3">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-a-3"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 3</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-a-4">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-a-4"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 4</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-a-5">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-a-5"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 5</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-a-6">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-a-6"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 6</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-a-7">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-a-7"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <div class="freecure-proc-badge" id="freecure-proc-badge">Freecure Proc!</div>
                                     <span class="sim-slot-badge">GCD 7</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-a-8">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-a-8"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon freecure-free-glow">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon freecure-free-glow">
                                     <span class="sim-slot-badge">GCD 8 (Free!)</span>
                                 </div>
                             </div>
@@ -239,42 +239,42 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="sim-slots freecure-slots">
                                 <div class="sim-slot" id="slot-freecure-b-1">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-b-1"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 1</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-b-2">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-b-2"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 2</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-b-3">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-b-3"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 3</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-b-4">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-b-4"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 4</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-b-5">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-b-5"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 5</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-b-6">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-b-6"></div>
-                                    <img src="Glare_III.png" alt="Glare III" class="sim-slot-icon">
+                                    <img src="assets/Glare_III.png" alt="Glare III" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 6</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-b-7">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-b-7"></div>
-                                    <img src="Glare_III.png" alt="Glare III" class="sim-slot-icon">
+                                    <img src="assets/Glare_III.png" alt="Glare III" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 7</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-b-8">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-b-8"></div>
-                                    <img src="Glare_III.png" alt="Glare III" class="sim-slot-icon">
+                                    <img src="assets/Glare_III.png" alt="Glare III" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 8</span>
                                 </div>
                             </div>
@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h2>But What About MP?</h2>
                 <p>One concern might be the higher MP cost of <span class="cure2">Cure II</span> (1,000 MP compared to <span class="cure1">Cure I</span>'s 400 MP). However, White Mages have access to an incredible suite of MP recovery and free healing tools:</p>
                 <ul>
-                    <li><img src="48px-Lucid_Dreaming_Icon.png" alt="Lucid Dreaming Icon" class="inline-icon"> <strong>Lucid Dreaming (Lv. 14):</strong> Unlocked at level 14, this ability restores a significant amount of MP (3,850 MP over 21 seconds), allowing you to sustain your healing output without running out of MP. By using Lucid Dreaming effectively, you should <strong>never run out of MP</strong>. As a rule of thumb, <b>pop Lucid Dreaming around 7,000 MP</b> for best practice MP management. Keep it rolling!</li>
+                    <li><img src="assets/48px-Lucid_Dreaming_Icon.png" alt="Lucid Dreaming Icon" class="inline-icon"> <strong>Lucid Dreaming (Lv. 14):</strong> Unlocked at level 14, this ability restores a significant amount of MP (3,850 MP over 21 seconds), allowing you to sustain your healing output without running out of MP. By using Lucid Dreaming effectively, you should <strong>never run out of MP</strong>. As a rule of thumb, <b>pop Lucid Dreaming around 7,000 MP</b> for best practice MP management. Keep it rolling!</li>
                     <li><strong>Assize (Lv. 56):</strong> Instantly recovers 500 MP every 40 seconds while delivering free healing and damage.</li>
                     <li><strong>Thin Air (Lv. 58):</strong> Makes your next spell cost exactly 0 MP. Perfect for high-cost spells.</li>
                     <li><strong>Aetherial Lilies (Lv. 52+):</strong> Afflatus Solace (and later Afflatus Rapture) are instant casts that heal for 800 potency at exactly 0 MP, while charging your Blood Lily for massive damage.</li>
@@ -379,27 +379,27 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="sim-slots mp-slots">
                                 <div class="sim-slot" id="slot-mp-a-1">
                                     <div class="sim-slot-progress" id="slot-progress-mp-a-1"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 1</span>
                                 </div>
                                 <div class="sim-slot" id="slot-mp-a-2">
                                     <div class="sim-slot-progress" id="slot-progress-mp-a-2"></div>
-                                    <img src="Glare_III.png" alt="Glare III" class="sim-slot-icon">
+                                    <img src="assets/Glare_III.png" alt="Glare III" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 2</span>
                                 </div>
                                 <div class="sim-slot" id="slot-mp-a-3">
                                     <div class="sim-slot-progress" id="slot-progress-mp-a-3"></div>
-                                    <img src="Glare_III.png" alt="Glare III" class="sim-slot-icon">
+                                    <img src="assets/Glare_III.png" alt="Glare III" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 3</span>
                                 </div>
                                 <div class="sim-slot" id="slot-mp-a-4">
                                     <div class="sim-slot-progress" id="slot-progress-mp-a-4"></div>
-                                    <img src="Glare_III.png" alt="Glare III" class="sim-slot-icon">
+                                    <img src="assets/Glare_III.png" alt="Glare III" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 4</span>
                                 </div>
                                 <div class="sim-slot" id="slot-mp-a-5">
                                     <div class="sim-slot-progress" id="slot-progress-mp-a-5"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 5</span>
                                 </div>
                             </div>
@@ -433,27 +433,27 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="sim-slots mp-slots">
                                 <div class="sim-slot" id="slot-mp-b-1">
                                     <div class="sim-slot-progress" id="slot-progress-mp-b-1"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 1</span>
                                 </div>
                                 <div class="sim-slot" id="slot-mp-b-2">
                                     <div class="sim-slot-progress" id="slot-progress-mp-b-2"></div>
-                                    <img src="Glare_III.png" alt="Glare III" class="sim-slot-icon">
+                                    <img src="assets/Glare_III.png" alt="Glare III" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 2</span>
                                 </div>
                                 <div class="sim-slot" id="slot-mp-b-3">
                                     <div class="sim-slot-progress" id="slot-progress-mp-b-3"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 3</span>
                                 </div>
                                 <div class="sim-slot" id="slot-mp-b-4">
                                     <div class="sim-slot-progress" id="slot-progress-mp-b-4"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 4</span>
                                 </div>
                                 <div class="sim-slot" id="slot-mp-b-5">
                                     <div class="sim-slot-progress" id="slot-progress-mp-b-5"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 5</span>
                                 </div>
                             </div>
@@ -508,17 +508,17 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="sim-slots">
                                 <div class="sim-slot" id="slot-a-1">
                                     <div class="sim-slot-progress" id="slot-progress-a-1"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 1</span>
                                 </div>
                                 <div class="sim-slot" id="slot-a-2">
                                     <div class="sim-slot-progress" id="slot-progress-a-2"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 2</span>
                                 </div>
                                 <div class="sim-slot" id="slot-a-3">
                                     <div class="sim-slot-progress" id="slot-progress-a-3"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 3</span>
                                 </div>
                             </div>
@@ -543,17 +543,17 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="sim-slots">
                                 <div class="sim-slot" id="slot-b-1">
                                     <div class="sim-slot-progress" id="slot-progress-b-1"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 1</span>
                                 </div>
                                 <div class="sim-slot" id="slot-b-2">
                                     <div class="sim-slot-progress" id="slot-progress-b-2"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 2</span>
                                 </div>
                                 <div class="sim-slot" id="slot-b-3">
                                     <div class="sim-slot-progress" id="slot-progress-b-3"></div>
-                                    <img src="Glare_III.png" alt="Glare III" class="sim-slot-icon">
+                                    <img src="assets/Glare_III.png" alt="Glare III" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 3</span>
                                 </div>
                             </div>
@@ -620,9 +620,9 @@ document.addEventListener('DOMContentLoaded', () => {
             firstCureName: 'Cure II',
             secondCureName: 'Cure I',
             headerHtml: `
-                <img src="48px-Cure_II_Icon.png" alt="Cure II Icon">
+                <img src="assets/48px-Cure_II_Icon.png" alt="Cure II Icon">
                 STOP USING <span class="cure1-header">Cure II</span>, USE <span class="cure2">Cure I</span>
-                <img src="48px-Cure_Icon.png" alt="Cure I Icon">
+                <img src="assets/48px-Cure_Icon.png" alt="Cure I Icon">
             `,
             tldrHtml: `
                 <h2>
@@ -632,7 +632,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="tldr-item">
                         <span class="tldr-badge badge-stop">STOP</span>
                         <div class="tldr-text">
-                            <strong>Cure II is a trap.</strong> As soon as you unlock <img src="48px-Cure_Icon.png" alt="Cure I Icon"> <span class="cure2">Cure I</span> at level 2, remove <img src="48px-Cure_II_Icon.png" alt="Cure II Icon"> <span class="cure1">Cure II</span> from your hotbar completely.
+                            <strong>Cure II is a trap.</strong> As soon as you unlock <img src="assets/48px-Cure_Icon.png" alt="Cure I Icon"> <span class="cure2">Cure I</span> at level 2, remove <img src="assets/48px-Cure_II_Icon.png" alt="Cure II Icon"> <span class="cure1">Cure II</span> from your hotbar completely.
                         </div>
                     </div>
                     <div class="tldr-item">
@@ -644,7 +644,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="tldr-item">
                         <span class="tldr-badge badge-avoid">AVOID</span>
                         <div class="tldr-text">
-                            <strong>OOM Catastrophe.</strong> Spamming <img src="48px-Cure_II_Icon.png" alt="Cure II Icon"> Cure II drains your MP instantly, leaving you completely out of mana and unable to cast.
+                            <strong>OOM Catastrophe.</strong> Spamming <img src="assets/48px-Cure_II_Icon.png" alt="Cure II Icon"> Cure II drains your MP instantly, leaving you completely out of mana and unable to cast.
                         </div>
                     </div>
                 </div>
@@ -751,42 +751,42 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="sim-slots freecure-slots">
                                 <div class="sim-slot" id="slot-freecure-a-1">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-a-1"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 1</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-a-2">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-a-2"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 2</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-a-3">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-a-3"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 3</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-a-4">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-a-4"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 4</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-a-5">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-a-5"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 5</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-a-6">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-a-6"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 6</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-a-7">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-a-7"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 7</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-a-8">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-a-8"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 8</span>
                                 </div>
                             </div>
@@ -811,43 +811,43 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="sim-slots freecure-slots">
                                 <div class="sim-slot" id="slot-freecure-b-1">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-b-1"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 1</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-b-2">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-b-2"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 2</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-b-3">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-b-3"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 3</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-b-4">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-b-4"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 4</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-b-5">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-b-5"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 5</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-b-6">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-b-6"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 6</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-b-7">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-b-7"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <div class="freecure-proc-badge" id="freecure-proc-badge-b">Freecure Proc!</div>
                                     <span class="sim-slot-badge">GCD 7</span>
                                 </div>
                                 <div class="sim-slot" id="slot-freecure-b-8">
                                     <div class="sim-slot-progress" id="slot-progress-freecure-b-8"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon freecure-free-glow">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon freecure-free-glow">
                                     <span class="sim-slot-badge">GCD 8 (Free!)</span>
                                 </div>
                             </div>
@@ -949,27 +949,27 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="sim-slots mp-slots">
                                 <div class="sim-slot" id="slot-mp-a-1">
                                     <div class="sim-slot-progress" id="slot-progress-mp-a-1"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 1</span>
                                 </div>
                                 <div class="sim-slot" id="slot-mp-a-2">
                                     <div class="sim-slot-progress" id="slot-progress-mp-a-2"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 2</span>
                                 </div>
                                 <div class="sim-slot" id="slot-mp-a-3">
                                     <div class="sim-slot-progress" id="slot-progress-mp-a-3"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 3</span>
                                 </div>
                                 <div class="sim-slot" id="slot-mp-a-4">
                                     <div class="sim-slot-progress" id="slot-progress-mp-a-4"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 4</span>
                                 </div>
                                 <div class="sim-slot" id="slot-mp-a-5">
                                     <div class="sim-slot-progress" id="slot-progress-mp-a-5"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 5</span>
                                 </div>
                             </div>
@@ -1003,27 +1003,27 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="sim-slots mp-slots">
                                 <div class="sim-slot" id="slot-mp-b-1">
                                     <div class="sim-slot-progress" id="slot-progress-mp-b-1"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 1</span>
                                 </div>
                                 <div class="sim-slot" id="slot-mp-b-2">
                                     <div class="sim-slot-progress" id="slot-progress-mp-b-2"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 2</span>
                                 </div>
                                 <div class="sim-slot" id="slot-mp-b-3">
                                     <div class="sim-slot-progress" id="slot-progress-mp-b-3"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 3</span>
                                 </div>
                                 <div class="sim-slot" id="slot-mp-b-4">
                                     <div class="sim-slot-progress" id="slot-progress-mp-b-4"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 4</span>
                                 </div>
                                 <div class="sim-slot" id="slot-mp-b-5">
                                     <div class="sim-slot-progress" id="slot-progress-mp-b-5"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 5</span>
                                 </div>
                             </div>
@@ -1078,17 +1078,17 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="sim-slots">
                                 <div class="sim-slot" id="slot-a-1">
                                     <div class="sim-slot-progress" id="slot-progress-a-1"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 1</span>
                                 </div>
                                 <div class="sim-slot" id="slot-a-2">
                                     <div class="sim-slot-progress" id="slot-progress-a-2"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 2</span>
                                 </div>
                                 <div class="sim-slot" id="slot-a-3">
                                     <div class="sim-slot-progress" id="slot-progress-a-3"></div>
-                                    <img src="48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_II_Icon.png" alt="Cure II" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 3</span>
                                 </div>
                             </div>
@@ -1113,17 +1113,17 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="sim-slots">
                                 <div class="sim-slot" id="slot-b-1">
                                     <div class="sim-slot-progress" id="slot-progress-b-1"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 1</span>
                                 </div>
                                 <div class="sim-slot" id="slot-b-2">
                                     <div class="sim-slot-progress" id="slot-progress-b-2"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 2</span>
                                 </div>
                                 <div class="sim-slot" id="slot-b-3">
                                     <div class="sim-slot-progress" id="slot-progress-b-3"></div>
-                                    <img src="48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
+                                    <img src="assets/48px-Cure_Icon.png" alt="Cure I" class="sim-slot-icon">
                                     <span class="sim-slot-badge">GCD 3</span>
                                 </div>
                             </div>
